@@ -11,10 +11,14 @@ class App extends Component {
   };
 
   searchEmployees = () => {
+    console.log('I am working')
     API.getEmployees().then(res => this.setState({
-      name: res.data.results
+      name: res.data.results,
+      
   }
   )).catch(err => console.log(err))
+
+  
 };
 
 
