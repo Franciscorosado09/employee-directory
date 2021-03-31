@@ -7,18 +7,27 @@ import API from "./utils/API";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    name: []
+    
+    employees: []
   };
 
-  searchEmployees = () => {
+
+
+ 
+ componentDidMount(){
+   console.log(API.monkey)
+   this.fetchEmployees();
+ }
+
+  fetchEmployees = () => {
     console.log('I am working')
     API.getEmployees().then(res => this.setState({
-      name: res.data.results,
+      employees: res.data.results,
       
   }
   )).catch(err => console.log(err))
 
-  
+
 };
 
 
@@ -34,14 +43,16 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Employees List</Title>
-        {this.state.name.map((employee) => (
+        {this.state.employees.map((employee) => (
        
           <EmployeeCard
             removeEmployee={this.removeEmployee}
-            id={employee.id}
-            key={employee.id}
+            id={employee.id.name}
+            key={employee.id.value}
             name={employee.name.first}
             lastname= {employee.name.last}
+            dob= {employee.dob.date}
+            age= {employee.dob.age}
             image={employee.picture.thumbnail}
             email={employee.email}
             location={employee.location.city}
