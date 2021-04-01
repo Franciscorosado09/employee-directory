@@ -18,7 +18,7 @@ function EmployeeCard(props) {
             <strong>Email:</strong> {props.email}
           </li>
           <li>
-            <strong>Location:</strong> {props.location}  <strong>State:</strong> {props.state}
+            <strong>Location:</strong> {props.location}, {props.state}
           </li>
           
         </ul>
