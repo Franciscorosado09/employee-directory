@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 function SearchForm(props) {
   return (
@@ -11,7 +12,7 @@ function SearchForm(props) {
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search For a Movie"
+          placeholder="Search For an Employee"
           id="search"
         />
         <br />

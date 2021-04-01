@@ -10,24 +10,20 @@ function EmployeeCard(props) {
       <div className="content">
         <ul>
           <li>
-            <strong>Full Name:</strong> {props.name} {props.lastname}
+            <strong>Full Name:</strong> {props.name} {props.lastname} <strong>Age:</strong> {props.age}
           </li>
           
-          <li>
-            <strong>Age:</strong> {props.age}
-          </li>
+          
           <li>
             <strong>Email:</strong> {props.email}
           </li>
           <li>
-            <strong>Location:</strong> {props.location}
+            <strong>Location:</strong> {props.location}  <strong>State:</strong> {props.state}
           </li>
-          <li>
-            <strong>State:</strong> {props.state}
-          </li>
+          
         </ul>
       </div>
-      <span onClick={() => props.removeEmployee(props.id)} className="remove">
+      <span onClick={() => props.removeEmployee(props.key)} className="remove">
         𝘅
       </span>
     </div>
